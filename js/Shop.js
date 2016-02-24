@@ -80,6 +80,14 @@ var Shop = (function () {
                 console.log(this.getProducts()[i].getName() + ' type - ' + this.getProducts()[i].getType());
             }
         }
+
+        if (type == 'quantity') {
+            for (var i = 0; i < this.getProducts().length; i++) {
+                if (this.getProducts()[i].getQuantity() > 0) {
+                    console.log(this.getProducts()[i]);
+                }
+            }
+        }
     }
 
     return Shop;
