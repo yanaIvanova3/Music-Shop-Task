@@ -9,7 +9,7 @@
 <script type="text/javascript" src="js/Shop.js"></script>
 
 <script type="text/javascript">
-    var ins1 = new Instrument ('bla', 'violin', 100, 3);
+    var ins1 = new Instrument ('vla', 'violin', 100, 3);
     var ins2 = new Instrument ('dla', 'violin', 11, 5);
     var ins3 = new Instrument ('gla', 'violin', 44, 1);
 
@@ -19,13 +19,9 @@
     newShop.setProducts(ins2);
     newShop.setProducts(ins3);
 
-    newShop.getProducts().sort(function(a, b) {
-        return parseFloat(a.getPrice()) - parseFloat(b.getPrice());
-    });
 
-    for (var i = 0; i < newShop.getProducts().length; i++) {
-        console.log(newShop.getProducts()[i].getPrice());
-    }
+    newShop.reviewItems('byPrice');
+
 
 
 </script>
